@@ -111,6 +111,66 @@ def conditionStatement():
         else:
             print("A is greater than 11")
 
+def whileLoops():
+    i = 0
+    # WHILE Loops
+    while i < 5:
+        print(i)
+        i += 1
+        if i == 3:
+            print('continue loop')
+            continue
+            print("This line will not be printed")
+        if i % 4 == 0:
+            print("i is divisible by 4")
+            break
+    else: 
+        # THIS LINE WON'T BE EXECUTED AS THERE IS A BREAK WHICH IS EXECUTED.
+        print("Loop finished and i is more than or equal to  5")
+
+def forLoops():
+    loop = (1,2,3,4,5,6,7,8,9);
+    for i in loop: 
+        print(i)
+        if i % 3 == 0:
+            print("Using continue")
+            continue
+        if i % 5 == 0:
+            print("Using break")
+            break
+    print()
+    print("Looping through string")
+    print()
+    for char in "Hello World":
+        print(char)
+
+    print()
+    print("FOR LOOP using range")
+    print()
+
+    for index in range(10):
+        print(index)
+    
+    print()
+    print("Looping through range using startIndex and endIndex")
+    print()
+
+    startIndex = 2
+    endIndex = 7
+    for index in range(startIndex, endIndex):
+        print(index)
+
+    print()
+    print("Looping through range using startIndex and endIndex, step index")
+    print()
+
+    stepIndex = 2
+    for index in range(startIndex, endIndex, stepIndex):
+        print(index)
+    else: print("Finally Looped from", startIndex, endIndex, " step index added where step is", stepIndex)
+
 # variables()
 # generateRandomNumber()
-conditionStatement()
+# conditionStatement()
+# whileLoops()
+# forLoops()

@@ -3,6 +3,8 @@ print("Welcome to python")
 
 # To define variables we just need to assign values to those variables.
 def variables():
+    # import math
+
     #text type
     strType = "string"
 
@@ -13,8 +15,10 @@ def variables():
     intVal = "53" # Changes data-type of the variables. 
     print(intVal, type(intVal))
 
-    floatVal = 45.5 # Floating point number
-    print(floatVal, type(floatVal))
+    print("Convert string to int", int(intVal))
+
+    floatVal = 45.7 # Floating point number
+    print(floatVal, type(floatVal), int(floatVal))
     
     complexType = 1j
     print(complexType, type(complexType))

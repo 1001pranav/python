@@ -39,8 +39,11 @@ print(removedColor)
 '''
 # Check if element is present in the array 
 yellow = "Yellow"
-if (yellow in colors):
-    print("Yellow" in colors)
+print("Checking if '{0}' present in the colors: {1}".format(yellow, yellow in colors))
+
+if yellow in colors:
+    colors.remove(yellow)
+    print("colors after removing '{0}': {1}".format(yellow, colors))
 
 print(colors + fruit_list)
 # TUPLE

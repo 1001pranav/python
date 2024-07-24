@@ -171,10 +171,24 @@ def forLoops():
     stepIndex = 2
     for index in range(startIndex, endIndex, stepIndex):
         print(index)
-    else: print("Finally Looped from", startIndex, endIndex, " step index added where step is", stepIndex)
+    else: print("Finally Looped from step {0} {1} index added where step is {2}".format(startIndex, endIndex, stepIndex))
+
+
+def tryExcept(): 
+    try: 
+        a = a/0
+    except ZeroDivisionError as e:
+        print("Caught an zero division exception: ", e)
+    except NameError as e:
+        print("Caught an Named exception ", e)
+    except Exception as e:
+        print("Caught an unknown exception: ", e)
+    finally:
+        print("finally completed")
 
 # variables()
 # generateRandomNumber()
 # conditionStatement()
 # whileLoops()
 # forLoops()
+# tryExcept()

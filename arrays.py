@@ -1,7 +1,8 @@
 # LISTS
 colors=["Yellow", "Red", "Green", "White", "Black"]
 
-fruit_list = ["Apple", "Mango", "Orange"]
+fruit_list = ["Apple", "Mango", "Orange", "Banana"]
+
 # UNPACKING LISTS (ARRAY)
 yellowColor, redColor, *data = colors
 '''
@@ -25,6 +26,11 @@ print(colors)
     colors.insert(1, "Blue") // This will insert into 1st index
 '''
 
+'''
+    Inserting a multiple values between two indices
+'''
+
+fruit_list[1:3] = ["blackcurrant", "watermelon"]
 '''
     The below code will remove the last element from the array.
     This will return the removed element.

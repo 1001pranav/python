@@ -164,15 +164,14 @@ def forLoops():
     for index in range(startIndex, endIndex):
         print(index)
 
+    stepIndex = 2
     print()
-    print("Looping through range using startIndex and endIndex, step index")
+    print(f"Looping through range using start index{startIndex} and end index {endIndex}, step index {stepIndex}")
     print()
 
-    stepIndex = 2
     for index in range(startIndex, endIndex, stepIndex):
         print(index)
     else: print("Finally Looped from step {0} {1} index added where step is {2}".format(startIndex, endIndex, stepIndex))
-
 
 def tryExcept(): 
     try: 

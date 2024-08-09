@@ -92,8 +92,6 @@ for row in matrix:
         print(element, end=' ')
     print()  # New line after each row
 
-
-# Removes all elements from the list.
 print()
 print()
 

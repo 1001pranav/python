@@ -185,9 +185,15 @@ def tryExcept():
     finally:
         print("finally completed")
 
+def lambdaFunction():
+    num=2
+    square=lambda num: num*num
+    print(square(num))
+
 # variables()
 # generateRandomNumber()
 # conditionStatement()
 # whileLoops()
 # forLoops()
 # tryExcept()
+lambdaFunction()

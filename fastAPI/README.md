@@ -13,3 +13,17 @@ By Default the endpoint for the FastAPI is - `http://127.0.0.1:8000/`,
 To change the port  add `--port <PORT_NUMBER>` flag in the above command.
 
 If You want to change the host then we can use `--host <HOST_NAME>` flag.
+
+# Creating virtual env
+* Install venv:
+`pip install virtualenv`
+
+* To Create venv:
+`python3 -m venv <virtual-environment-name>`
+
+* To Run venv:
+`source <virtual-environment-name>/bin/activate`
+
+# Installing dependencies on local server
+For installing dependencies run the following command:
+`pip install -r requirements.txt`

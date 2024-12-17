@@ -4,6 +4,17 @@ class Food:
     def __init__(self, name: str, price: float, quantity: int):
 
         #Basic Validation
+        """
+        Initialize a Food object with name, price and quantity.
+        
+        Args:
+            name (str): Name of the food.
+            price (float): Price of the food. Should be more than 0.
+            quantity (int): Quantity of the food. Should be more than 0.
+        
+        Raises:
+            AssertionError: If the price or the quantity is not more than 0.
+        """
         assert price>0, f"Price {price} should be more than 0"
         assert quantity > 0, f"Quantity {quantity} should be more than 0"
         
@@ -11,7 +22,7 @@ class Food:
         self.price = price
         self.quantity = quantity
         Food.all.append(self)
-        
+    
 
     def calculate_price(self) -> float:
         return self.price * self.quantity
@@ -21,6 +32,9 @@ class Food:
     
     def __repr__(self):
         return f"Item('{self.name}', {self.price}, {self.quantity})"
+    
+    def __str__(self):
+        return f"Name - '{self.name}', Price - {self.price}, Quantity - {self.quantity}"
     
 class ReturnedFood:
     def __init__(self, name: str, price: float, quantity: int, returned_food: int):
@@ -42,5 +56,8 @@ print(f"Price for Grapes - {grapes.calculate_price()}")
 apple.apply_discount()
 print(f'Price of apple after discount - {apple.calculate_price()}')
 print(Food.all)
+
+print('__str__', banana.__str__())
+print('__repr__',apple.__repr__())
 
 

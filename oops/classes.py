@@ -1,7 +1,6 @@
 class Food:
     all=[]
-    discount_rate=0.2
-    def __init__(self, name: str, price: float, quantity: int):
+    def __init__(self, name: str, price: float, quantity: int, discount=1):
 
         #Basic Validation
         """
@@ -21,43 +20,29 @@ class Food:
         self.name = name
         self.price = price
         self.quantity = quantity
+        self.__discount_rate = discount
         Food.all.append(self)
     
 
     def calculate_price(self) -> float:
-        return self.price * self.quantity
-    
-    def apply_discount(self) -> float:
-        self.price = self.price * self.discount_rate 
+        return self.price * self.quantity - (self.price * self.quantity * self.__discount_rate)
     
     def __repr__(self):
         return f"Item('{self.name}', {self.price}, {self.quantity})"
     
     def __str__(self):
-        return f"Name - '{self.name}', Price - {self.price}, Quantity - {self.quantity}"
+        return f"Name - '{self.name}', Price - {self.price}, Quantity - {self.quantity} Discount price - {self.calculate_price()}  Initial Price - {self.price * self.quantity} Discount % - {self.__discount_rate * 100}"
     
-class ReturnedFood:
-    def __init__(self, name: str, price: float, quantity: int, returned_food: int):
-        super().__init__()
-        self.name = name
-        self.price = price
-        self.quantity = quantity
-        self.returned_food = returned_food
-    def calculate_price(self):
-        return self.price * (self.quantity - self.returned_food)    
-
-banana = Food('Banana', 3.5, 10)
-apple = Food('apple', 7.6, 30)
-grapes = ReturnedFood('grapes', 7.65, 40, 12)
+banana = Food('Banana', 3.5, 10, 0.0134)
+apple = Food('apple', 7.6, 30, 0.43)
 
 print(f"Price for Banana - {banana.calculate_price()}") 
 print(f"Price for Apple - {apple.calculate_price()}")
-print(f"Price for Grapes - {grapes.calculate_price()}")
-apple.apply_discount()
+
 print(f'Price of apple after discount - {apple.calculate_price()}')
 print(Food.all)
 
 print('__str__', banana.__str__())
+print('__str__',apple.__str__())
 print('__repr__',apple.__repr__())
-
 

@@ -81,30 +81,49 @@ class DoubleLinkedList:
         # Return the size of the list
         return self.size  # Return the current size of the list
 
-# Example usage
-dll = DoubleLinkedList()  # Create a new doubly linked list
 
-# Append some elements to the list
-dll.append(10)
-dll.append(20)
-dll.append(30)
+def exampleDoubleLinkedList():
 
-print("Initial list:")
-dll.print_list()  # Print the current list
-print(f"List size: {len(dll)}")  # Print the size of the list
+    # Example usage
+    dll = DoubleLinkedList()  # Create a new doubly linked list
 
-# Insert 15 after the first node
-dll.insert_after(dll.head, 15)
-print("\nAfter inserting 15 after 10:")
-dll.print_list()  # Print the updated list
-print(f"List size: {len(dll)}")  # Print the updated size of the list
+    # Append some elements to the list
+    dll.append(10)
+    dll.append(20)
+    dll.append(30)
 
-# Remove a node with the value 20
-dll.remove(20)
-print("\nAfter removing 20:")
-dll.print_list()  # Print the list after removal
-print(f"List size: {len(dll)}")  # Print the updated size of the list
+    print("Initial list:")
+    dll.print_list()  # Print the current list
+    print(f"List size: {len(dll)}")  # Print the size of the list
+    '''
+    Output:
+    Initial list:
+    10
+    20
+    30
+    List size: 3
+    '''
+    # Insert 15 after the first node
+    dll.insert_after(dll.head, 15)
+    print("\nAfter inserting 15 after 10:")
+    dll.print_list()  # Print the updated list
+    print(f"List size: {len(dll)}")  # Print the updated size of the list
+    '''
+    After inserting 15 after 10:
+    10
+    15
+    20
+    30
+    List size: 4
+    '''
+    # Remove a node with the value 20
+    dll.remove(20)
+    print("\nAfter removing 20:")
+    dll.print_list()  # Print the list after removal
+    print(f"List size: {len(dll)}")  # Print the updated size of the list
 
-# Print the list in reverse order
-print("\nList in reverse:")
-dll.print_list_reverse()  # Print the list in reverse
+    # Print the list in reverse order
+    print("\nList in reverse:")
+    dll.print_list_reverse()  # Print the list in reverse
+
+exampleDoubleLinkedList()

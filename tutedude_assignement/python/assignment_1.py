@@ -22,7 +22,7 @@ def task_2() -> None:
     
     print(f"Hello, {first_name} {last_name}! Welcome to the Python Programming")
 
-if __name__ == "main":
+if __name__ == "__main__":
     try:
         task_1()
     except ValueError as e:

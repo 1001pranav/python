@@ -1,0 +1,11 @@
+Product | Original Price | Discounted Price 
+Mouse 500 2250.0 
+Keyboard 800 3600.0 
+Monitor 7000 31500.0 
+Pendrive 400 1800.0 
+Camera 5000 22500.0 
+Summary: 
+ ----- 
+ Total items = 5 
+ Average Discount = 2740.0 
+ 
